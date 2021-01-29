@@ -1,0 +1,31 @@
+if(OtherUtils.getLoginStatus("user", request.getSession())) {
+
+} else {
+	OtherUtils.alert("µÇÂ¼×´Ì¬Ê§Ð§£¬ÇëÖØÐÂµÇÂ¼£¡", "/inlinevote/manage/login", response);
+}
+
+
+if(OtherUtils.getLoginStatus("user", request.getSession())) {
+	// ÅÐ¶ÏÇëÇóµÄ¹¦ÄÜ
+	String fun = request.getParameter("type");
+	if("update".equals(fun)) {
+		
+		
+	} else {
+		OtherUtils.alertByframe("µÇÂ¼×´Ì¬Ê§Ð§£¬ÇëÖØÐÂµÇÂ¼£¡", "/inlinevote/manage/login", response);
+	}
+}
+
+Connection connection = DBConnector.getConn();
+PreparedStatement pre = null;
+ResultSet res = null;
+int count = 0;
+try {
+	
+} catch (SQLException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+} finally {
+	DBConnector.close(connection, pre, res);
+}
+return count;

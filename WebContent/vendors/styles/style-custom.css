@@ -1,0 +1,6 @@
+.main-container {
+	height: 99%;
+}
+.main-container iframe {
+    border: 0;
+}
